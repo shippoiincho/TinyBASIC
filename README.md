@@ -3,7 +3,7 @@
 [豊四季 Tiny BASIC](https://github.com/vintagechips/ttbasic_arduino/tree/master)を CH32V003 単体で動くようにしたものです。
 フリーエリアとしては 512バイトを確保しています。<br>
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.jpg)
 
 電源さえ準備できれば、ほかにパソコンなどは必要ありません。自分はマイコンは 3.3V 動作で、キーボード用に 5V をつないでいますが、
 CH32V003 は今どきのマイコンとしては珍しく 5V 動作に対応しているので、すべて 5V で動かした方が簡単かもしれません。<br>
@@ -17,7 +17,7 @@ CH32V003 は今どきのマイコンとしては珍しく 5V 動作に対応し�
 (内部クロックでは画面が揺れます)
 SPI を使用している関係で 8pin 版ではうごきません。<br>
 
-![Schematic](board.png)
+![Schematic](board.jpg)
 
 キー入力は PS/2 キーボードに対応しています。
 PC1 を Clock に PC2 を DATA に接続します。(ほかに 5V と GND も)
