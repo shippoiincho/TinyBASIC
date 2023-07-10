@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//Core/core_riscv.c=GBK
+encoding//Debug/debug.c=GBK
+encoding//Peripheral/src/ch32v00x_flash.c=GBK
+encoding//User/PS2Keyboard.c=GBK
+encoding//User/PS2Keyboard.h=GBK
+encoding//User/basic.c=UTF-8
+encoding//User/main.c=GBK
