@@ -79,7 +79,7 @@ void EXTI7_0_IRQHandler(void)
 
         val=GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_1);
         if(val!=0) {
-            EXTI_ClearITPendingBit(EXTI_Line8); /* Clear Flag */
+            EXTI_ClearITPendingBit(EXTI_Line1); /* Clear Flag */
             return;
         }
 
