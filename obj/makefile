@@ -1,5 +1,5 @@
 ################################################################################
-# MRS Version: {"version":"1.8.5","date":"2023/05/22"}
+# MRS Version: 1.9.1
 # Automatically-generated file. Do not edit!
 ################################################################################
 
@@ -53,7 +53,7 @@ all: TinyBASIC.elf secondary-outputs
 
 # Tool invocations
 TinyBASIC.elf: $(OBJS) $(USER_OBJS)
-	@	@	riscv-none-embed-gcc -march=rv32ecxw -mabi=ilp32e -msmall-data-limit=0 -msave-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused -Wuninitialized  -g -T "C:\MRS_DATA\workspace\TinyBASIC\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"TinyBASIC.map" --specs=nano.specs --specs=nosys.specs -o "TinyBASIC.elf" $(OBJS) $(USER_OBJS) $(LIBS) -lprintf
+	@	@	riscv-none-embed-gcc -march=rv32ecxw -mabi=ilp32e -msmall-data-limit=0 -msave-restore -O2 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -Wunused -Wuninitialized  -g -T "C:\MRS_DATA\workspace\TinyBASIC\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"TinyBASIC.map" --specs=nano.specs --specs=nosys.specs -o "TinyBASIC.elf" $(OBJS) $(USER_OBJS) $(LIBS) -lprintf
 	@	@
 TinyBASIC.hex: TinyBASIC.elf
 	@	riscv-none-embed-objcopy -O ihex "TinyBASIC.elf"  "TinyBASIC.hex"

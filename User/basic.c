@@ -1275,26 +1275,26 @@ void isave() {
 
     FLASH_Unlock_Fast();
 
-    // Erase flash from 0x8003c00 to 0x8003fff
+    // Erase flash from 0x8003e00 to 0x8003fff
     for(int i=0;i<8;i++) {
-        FLASH_ErasePage_Fast(0x08003c00+i*64);
+        FLASH_ErasePage_Fast(0x08003e00+i*64);
     }
 
     // Program flash
     for(int i=0;i<8;i++) {
         FLASH_BufReset();
         for(int j=0;j<64;j+=4) {
-            data=(ibuf[i*64+j+3]<<24)+(ibuf[i*64+j+2]<<16)+(ibuf[i*64+j+1]<<8)+ibuf[i*64+j];
-            FLASH_BufLoad(0x08003c00+i*64+j, data);
+            data=(listbuf[i*64+j+3]<<24)+(listbuf[i*64+j+2]<<16)+(listbuf[i*64+j+1]<<8)+listbuf[i*64+j];
+            FLASH_BufLoad(0x08003e00+i*64+j, data);
         }
-        FLASH_ProgramPage_Fast(0x08003c00+i*64);
+        FLASH_ProgramPage_Fast(0x08003e00+i*64);
     }
     FLASH_Lock_Fast();
 }
 
 void iload() {
     for(int i=0;i<SIZE_LIST;i++) {
-        ibuf[i]=*(uint8_t *)(0x08003c00+i);
+        listbuf[i]=*(uint8_t *)(0x08003e00+i);
     }
 }
 
